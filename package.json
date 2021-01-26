@@ -17,6 +17,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "chapter-02": "webpack --config webpack/webpack.chapter-02.js"
+    "chapter-02-01": "webpack --config webpack/webpack.chapter-02-01.js",
+    "chapter-02-02": "webpack --config webpack/webpack.chapter-02-02.js"
   }
 }
