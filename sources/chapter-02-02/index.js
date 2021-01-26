@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file, react/prefer-stateless-function,
+ react/destructuring-assignment, react/prop-types, react/no-unused-prop-types */
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
@@ -7,24 +9,24 @@ class Post extends Component {
     return React.createElement(
       'div',
       {
-        className: 'post'
+        className: 'post',
       },
       React.createElement(
         'h2',
         {
           className: 'postAuthor',
-          id: this.props.id
+          id: this.props.id,
         },
         this.props.user,
         React.createElement(
           'span',
           {
-            className: 'postBody'
+            className: 'postBody',
           },
-          this.props.content
+          this.props.content,
         ),
-        this.props.children
-      )
+        this.props.children,
+      ),
     );
   }
 }
@@ -32,7 +34,7 @@ class Post extends Component {
 Post.propTypes = {
   id: PropTypes.number.isRequired,
   user: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired,
 };
 
 class Comment extends Component {
@@ -40,22 +42,22 @@ class Comment extends Component {
     return React.createElement(
       'div',
       {
-        className: 'comment'
+        className: 'comment',
       },
       React.createElement(
         'h2',
         {
-          className: 'commentAuthor'
+          className: 'commentAuthor',
         },
         this.props.user,
         React.createElement(
           'span',
           {
-            className: 'commentContent'
+            className: 'commentContent',
           },
-          this.props.content
-        )
-      )
+          this.props.content,
+        ),
+      ),
     );
   }
 }
@@ -63,7 +65,7 @@ class Comment extends Component {
 Comment.propTypes = {
   id: PropTypes.number.isRequired,
   user: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  content: PropTypes.string.isRequired,
 };
 
 const App = React.createElement(
@@ -71,13 +73,13 @@ const App = React.createElement(
   {
     id: 1,
     user: 'mark',
-    content: ' said: This is a post!'
+    content: ' said: This is a post!',
   },
   React.createElement(Comment, {
     id: 2,
     user: 'bob',
-    content: ' commented: wow! how cool!'
-  })
+    content: ' commented: wow! how cool!',
+  }),
 );
 
 const node = document.getElementById('root');
