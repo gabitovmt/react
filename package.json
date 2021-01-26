@@ -1,9 +1,22 @@
 {
   "name": "learning-react",
   "version": "1.0.0",
+  "description": "Использую для изучения React",
+  "private": true,
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "chapter-02": "webpack --config webpack/webpack.chapter-02.js"
   }
 }
