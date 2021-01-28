@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -22,12 +22,7 @@ module.exports = {
     }),
     new ESLintWebpackPlugin({
       extensions: ['js', 'ts'],
-      exclude: 'node_modules',
-      fix: true,
-      emitError: false,
-      emitWarning: false,
-      failOnWarning: false,
-      failOnError: false
+      exclude: 'node_modules'
     })
   ],
 };
