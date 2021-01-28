@@ -9,8 +9,12 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -29,6 +33,13 @@
     "chapter-02-01": "webpack --config webpack/webpack.chapter-02-01.js",
     "chapter-02-02": "webpack --config webpack/webpack.chapter-02-02.js",
     "chapter-02-hw-01": "webpack --config webpack/webpack.chapter-02-hw-01.js",
-    "chapter-02-03": "webpack --config webpack/webpack.chapter-02-03.js"
+    "chapter-02-03": "webpack --config webpack/webpack.chapter-02-03.js",
+    "chapter-02-04": "webpack --config webpack/webpack.chapter-02-04.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   }
 }
