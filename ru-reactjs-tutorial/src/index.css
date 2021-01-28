@@ -5,6 +5,7 @@ body {
 
 ol, ul {
   padding-left: 30px;
+  cursor: pointer;
 }
 
 .board-row:after {
@@ -32,6 +33,14 @@ ol, ul {
   width: 34px;
 }
 
+.square.win-square {
+  background: #8bc34a;
+}
+
+.square.selected, .square.win-square.selected {
+  background: #00c30f;
+}
+
 .square:focus {
   outline: none;
 }
@@ -47,4 +56,8 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+.current-step {
+  font-weight: bold;
 }
