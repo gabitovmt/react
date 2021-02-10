@@ -2,6 +2,7 @@ import React from "react";
 import Page5 from "./theme-5/Page5";
 import "./App.css";
 import ExtraPage5 from "./theme-5/ExtraPage5";
+import Page6 from "./theme-6/Page6";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -35,6 +36,9 @@ export default class App extends React.Component {
       <li className="App__chapter" onClick={() => this.setPage(this.extraPage5())}>
         Глава 5. Дополнительное упражнение
       </li>
+      <li className="App__chapter" onClick={() => this.setPage(this.page6())}>
+        Глава 6. Обработка событий
+      </li>
     </ul>
   }
 
@@ -44,6 +48,10 @@ export default class App extends React.Component {
 
   extraPage5() {
       return <ExtraPage5 />
+  }
+
+  page6() {
+    return <Page6 />
   }
 
   render() {
