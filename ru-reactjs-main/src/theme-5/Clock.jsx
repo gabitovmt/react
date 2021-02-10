@@ -1,0 +1,35 @@
+import React from "react";
+import FormattedDate from "./FormattedDate";
+
+export default class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      50
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+  render() {
+    return(
+      <div>
+        <h1>Привет, мир!</h1>
+        <FormattedDate date={this.state.date} />
+      </div>
+    );
+  }
+}
