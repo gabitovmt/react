@@ -1,10 +1,11 @@
 import React from "react";
-import Page5 from "./theme-5/Page5";
 import "./App.css";
+import Page5 from "./theme-5/Page5";
 import ExtraPage5 from "./theme-5/ExtraPage5";
 import Page6 from "./theme-6/Page6";
 import Page7 from "./theme-7/Page7";
 import Page8 from "./theme-8/Page8";
+import Page9 from "./theme-9/Page9";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -50,6 +51,10 @@ export default class App extends React.Component {
     this.setPage(<Page8 />);
   }
 
+  onPage9Click = () => {
+    this.setPage(<Page9 />);
+  }
+
   intro() {
     return <ul>
       <li className="App__chapter" onClick={this.onPage5Click}>
@@ -66,6 +71,9 @@ export default class App extends React.Component {
       </li>
       <li className="App__chapter" onClick={this.onPage8Click}>
         Глава 8. Списки и ключи
+      </li>
+      <li className="App__chapter" onClick={this.onPage9Click}>
+        Глава 9. Формы
       </li>
     </ul>
   }
