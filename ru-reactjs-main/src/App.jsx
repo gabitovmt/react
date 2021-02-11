@@ -4,6 +4,7 @@ import "./App.css";
 import ExtraPage5 from "./theme-5/ExtraPage5";
 import Page6 from "./theme-6/Page6";
 import Page7 from "./theme-7/Page7";
+import Page8 from "./theme-8/Page8";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -45,6 +46,10 @@ export default class App extends React.Component {
     this.setPage(<Page7 />);
   }
 
+  onPage8Click = () => {
+    this.setPage(<Page8 />);
+  }
+
   intro() {
     return <ul>
       <li className="App__chapter" onClick={this.onPage5Click}>
@@ -58,6 +63,9 @@ export default class App extends React.Component {
       </li>
       <li className="App__chapter" onClick={this.onPage7Click}>
         Глава 7. Условный рендеринг
+      </li>
+      <li className="App__chapter" onClick={this.onPage8Click}>
+        Глава 8. Списки и ключи
       </li>
     </ul>
   }
