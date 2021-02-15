@@ -11,6 +11,7 @@ import Page11 from "./theme-11/Page11";
 import Page12 from "./theme-12/Page12";
 import CodeSplittingPage from "./code-splitting/CodeSplittingPage";
 import ReactWithoutEs6Page from "./react-without-es6/ReactWithoutEs6Page";
+import ReactWithoutJsxPage from "./react-without-jsx/ReactWithoutJsxPage";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -80,6 +81,10 @@ export default class App extends React.Component {
     this.setPage(<ReactWithoutEs6Page />);
   }
 
+  handleReactWithoutJsxPageClick = () => {
+    this.setPage(<ReactWithoutJsxPage />);
+  }
+
   intro() {
     return <ul>
       <li className="App__chapter" onClick={this.handlePage5Click}>
@@ -114,6 +119,9 @@ export default class App extends React.Component {
       </li>
       <li className="App__chapter" onClick={this.handleReactWithoutEs6PageClick}>
         React без ES6
+      </li>
+      <li className="App__chapter" onClick={this.handleReactWithoutJsxPageClick}>
+        React без JSX
       </li>
     </ul>
   }
