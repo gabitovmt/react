@@ -10,6 +10,7 @@ import Page10 from "./theme-10/Page10";
 import Page11 from "./theme-11/Page11";
 import Page12 from "./theme-12/Page12";
 import CodeSplittingPage from "./code-splitting/CodeSplittingPage";
+import ReactWithoutEs6Page from "./react-without-es6/ReactWithoutEs6Page";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -75,6 +76,10 @@ export default class App extends React.Component {
     this.setPage(<CodeSplittingPage />);
   }
 
+  handleReactWithoutEs6PageClick = () => {
+    this.setPage(<ReactWithoutEs6Page />);
+  }
+
   intro() {
     return <ul>
       <li className="App__chapter" onClick={this.handlePage5Click}>
@@ -106,6 +111,9 @@ export default class App extends React.Component {
       </li>
       <li className="App__chapter" onClick={this.handleCodeSplittingPageClick}>
         Разделение кода
+      </li>
+      <li className="App__chapter" onClick={this.handleReactWithoutEs6PageClick}>
+        React без ES6
       </li>
     </ul>
   }
