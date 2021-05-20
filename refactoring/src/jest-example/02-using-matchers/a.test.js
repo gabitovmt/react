@@ -71,6 +71,7 @@ test('the shopping list has milk on it', () => {
   expect(new Set(shoppingList)).toContain('milk');
 });
 
+// Исключения
 function compileAndroidCode() {
   throw new Error('you are using the wrong JDK');
 }
