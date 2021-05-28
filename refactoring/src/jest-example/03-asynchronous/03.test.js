@@ -1,4 +1,4 @@
-import {fetchData, fetchDataResolve, fetchDataReject} from "./a";
+import {fetchData, fetchDataResolve, fetchDataReject} from "./03";
 
 // Don't do this!
 test('the data is peanut butter', () => {
