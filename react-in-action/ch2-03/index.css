@@ -1,0 +1,20 @@
+.commentBox {
+  padding: 8px;
+  border: thin solid gray;
+}
+
+.post {
+  border-bottom: thin dotted gray;
+}
+
+.postAuthor {
+  margin: 0;
+}
+
+.postBody {
+  padding-left: 1em;
+}
+
+.commentContent {
+  padding-left: 1em;
+}

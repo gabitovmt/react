@@ -1,3 +1,5 @@
+'use strict';
+
 const node = document.getElementById('root');
 const root = React.createElement('div', {},
   React.createElement('h1', {}, 'Hello, world!',
