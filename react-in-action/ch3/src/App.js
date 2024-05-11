@@ -4,6 +4,7 @@ import Secret from './Secret/Secret';
 import ShallowMerge from './ShallowMerge/ShallowMerge';
 import Parent from './Parent/Parent';
 import Counter from './Counter/Counter';
+import Greeting from './Greeting/Greeting';
 
 const pages = [{
   id: 'l-3.2',
@@ -21,6 +22,10 @@ const pages = [{
   id: 'l-3.4',
   label: 'Листинг 3.4. Неизменяемые свойства',
   component: <Counter onIncrement={console.log}/>
+}, {
+  id: 'l-3.5',
+  label: 'Листинг 3.5. Функциональные компоненты',
+  component: <Greeting for="Mark"/>
 }]
 
 class App extends Component {
