@@ -6,6 +6,7 @@ import Parent from './Parent/Parent';
 import Counter from './Counter/Counter';
 import Greeting from './Greeting/Greeting';
 import UserCard from './UserCard/UserCard';
+import ParentComponent from "./ParentComponent/ParentComponent";
 
 const pages = [{
   id: 'l-3.2',
@@ -31,6 +32,10 @@ const pages = [{
   id: 'l-3.6',
   label: 'Листинг 3.6. Передача свойств',
   component: <UserCard username="erondu"/>
+}, {
+  id: 'l-4.1',
+  label: 'Листинг 4.1. Методы жизненного цикла',
+  component: <ParentComponent/>
 }]
 
 class App extends Component {
@@ -81,11 +86,13 @@ class App extends Component {
 
   render() {
     return (
+      <React.StrictMode>
       <div className="App">
         <div>{this.buttons()}</div>
         <hr/>
         <div>{this.page()}</div>
       </div>
+      </React.StrictMode>
     );
   }
 }

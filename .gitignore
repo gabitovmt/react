@@ -12,6 +12,7 @@ node_modules
 
 # production
 /build
+react-in-action/**/build
 
 # misc
 .DS_Store
