@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Листинг 3.5. Функциональные компоненты без состояния
+
 function Greeting(props) {
   return <div>Hello {props.for}</div>;
 }

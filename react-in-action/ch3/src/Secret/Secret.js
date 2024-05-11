@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+// Листинг 3.2. Использование setState для изменения состояния компонента
+
 class Secret extends Component {
   constructor(props) {
     super(props);

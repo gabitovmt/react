@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+// Листинг 3.4. Неизменяемые свойства компонентов React
+
 class Counter extends Component {
   constructor(props) {
     super(props);

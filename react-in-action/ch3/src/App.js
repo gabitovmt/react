@@ -5,6 +5,7 @@ import ShallowMerge from './ShallowMerge/ShallowMerge';
 import Parent from './Parent/Parent';
 import Counter from './Counter/Counter';
 import Greeting from './Greeting/Greeting';
+import UserCard from './UserCard/UserCard';
 
 const pages = [{
   id: 'l-3.2',
@@ -26,6 +27,10 @@ const pages = [{
   id: 'l-3.5',
   label: 'Листинг 3.5. Функциональные компоненты',
   component: <Greeting for="Mark"/>
+}, {
+  id: 'l-3.6',
+  label: 'Листинг 3.6. Передача свойств',
+  component: <UserCard username="erondu"/>
 }]
 
 class App extends Component {

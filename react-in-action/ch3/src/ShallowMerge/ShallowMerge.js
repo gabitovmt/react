@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+// Листинг 3.3. Мелкое слияние с setState
+
 class ShallowMerge extends Component {
   constructor(props) {
     super(props);
