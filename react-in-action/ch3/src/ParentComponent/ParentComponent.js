@@ -5,11 +5,18 @@ class ChildComponent extends Component {
   constructor(props) {
     super(props);
     console.log('ChildComponent: constructor()');
+    this.state = {
+      oops: false
+    };
     this.oops = this.oops.bind(this);
   }
 
   render() {
     console.log('ChildComponent: render()');
+    if (this.state.oops) {
+      throw new Error('oops');
+    }
+
     return [
       <div key="name">Name: {this.props.name}</div>,
       <button key="error" onClick={this.oops}>Create error</button>
@@ -17,7 +24,9 @@ class ChildComponent extends Component {
   }
 
   oops() {
-    throw Error('oops');
+    this.setState(() => ({
+      oops: true
+    }));
   }
 
   // eslint-disable-next-line react/no-deprecated
@@ -63,12 +72,6 @@ class ChildComponent extends Component {
   componentWillUnmount() {
     console.log('ChildComponent : componentWillUnmount()');
   }
-
-  componentDidCatch(error, errorInfo) {
-    console.log('ChildComponent : componentDidCatch()');
-    console.error(error);
-    console.error(errorInfo);
-  }
 }
 
 ChildComponent.propTypes = {
@@ -83,7 +86,8 @@ class ParentComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ''
+      name: '',
+      error: null
     };
     this.onInputChange = this.onInputChange.bind(this);
   }
@@ -94,6 +98,15 @@ class ParentComponent extends Component {
 
   render() {
     console.log('ParentComponent: render');
+    if (this.state.error) {
+      return (
+        <details style={{whiteSpace: 'pre-wrap'}}>
+          {this.state.error.toString()}
+          <br/>
+          {this.state.errorInfo.componentStack}
+        </details>
+      )
+    }
     return [
       <h2 key="h2">Learn about rendering and lifecycle methods!</h2>,
       <input key="input" value={this.state.name} onChange={this.onInputChange}/>,
@@ -118,6 +131,7 @@ class ParentComponent extends Component {
     console.log('ParentComponent : componentDidCatch()');
     console.error(error);
     console.error(errorInfo);
+    this.setState(() => ({error, errorInfo}));
   }
 }
 
